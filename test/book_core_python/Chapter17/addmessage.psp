@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>添加成功</title>
+</head>
+<body>
+<% 
+import MySQLdb											# 导入MySQLdb模块
+import datetime
+name = req.form['name']										# 获取表单内容
+mail = req.form['email']
+site = req.form['site']
+content = req.form['content']
+now = datetime.datetime.now()
+time = now.strftime('%Y-%m-%d %H:%M:%S')
+db = MySQLdb.connect(host='localhost',								# 连接到数据库
+		user='root',
+		passwd='python',
+		db='message',
+		charset='gb2312')								# 设置字符编码
+cur = db.cursor()
+cur.execute("INSERT INTO message VALUES('%s','%s','%s','%s','%s')" % (name,mail,site,content,time))
+db.commit()
+cur.close()
+db.close()
+%>
+<h1>添加成功</h1>
+<br>
+<a href=show.psp>点击查看留言</a>
+</body>
+</html>

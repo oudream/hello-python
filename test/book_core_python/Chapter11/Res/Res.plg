@@ -1,0 +1,21 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Res - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Res.res" /d "_DEBUG" /d "_AFXDLL" "E:\BOOK\CODE\ตฺ11ีย\Res\Res.rc"" 
+Creating command line "link.exe /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/Res.pdb" /debug /machine:I386 /def:".\Res.def" /out:"Debug/Res.dll" /implib:"Debug/Res.lib" /pdbtype:sept  ".\Debug\Res.obj" ".\Debug\StdAfx.obj" ".\Debug\Res.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+Res.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

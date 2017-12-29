@@ -1,0 +1,2 @@
+import useSWIG
+useSWIG.showSWIG()

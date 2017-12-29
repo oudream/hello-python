@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: useSWIG - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Firefly\LOCALS~1\Temp\RSPB3.bat" with contents
+[
+@echo off
+swig -python -o .\useSWIG_wrap.c .\useSWIG.i
+]
+Creating command line "C:\DOCUME~1\Firefly\LOCALS~1\Temp\RSPB3.bat"
+Creating temporary file "C:\DOCUME~1\Firefly\LOCALS~1\Temp\RSPB4.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "USESWIG_EXPORTS" /D "__WIN32__" /Fp"Release/useSWIG.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\book\code\ตฺ8ีย\useSWIG\useSWIG.c"
+"E:\book\code\ตฺ8ีย\useSWIG\useSWIG_wrap.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Firefly\LOCALS~1\Temp\RSPB4.tmp" 
+SWIG
+Creating temporary file "C:\DOCUME~1\Firefly\LOCALS~1\Temp\RSPB5.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/_useSWIG.pdb" /machine:I386 /out:"_useSWIG.pyd" /implib:"Release/_useSWIG.lib" 
+".\Release\useSWIG.obj"
+".\Release\useSWIG_wrap.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Firefly\LOCALS~1\Temp\RSPB5.tmp"
+<h3>Output Window</h3>
+Compiling...
+useSWIG.c
+useSWIG_wrap.c
+D:\PYTHON25\INCLUDE\pyconfig.h(42) : warning C4005: '_CRT_SECURE_NO_DEPRECATE' : macro redefinition
+        E:\book\code\ตฺ8ีย\useSWIG\useSWIG_wrap.c(107) : see previous definition of '_CRT_SECURE_NO_DEPRECATE'
+Linking...
+   Creating library Release/_useSWIG.lib and object Release/_useSWIG.exp
+
+
+
+<h3>Results</h3>
+_useSWIG.pyd - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
