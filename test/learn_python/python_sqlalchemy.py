@@ -118,15 +118,15 @@ try:
     # 查询数据
     roles = session.query(Role)                 # 返回全部结果
     for role in roles:
-        print("Role:", role.id, role.name)
+        print(("Role:", role.id, role.name))
 
     users = session.query(User)                 # 返回全部结果
     for user in users:
-        print("User:", user.id, user.name, user.age, user.role_id)
+        print(("User:", user.id, user.name, user.age, user.role_id))
 
     # 其他获取数据的方式
-    print("get(id):", session.query(User).get(1))                       # 返回结果集中id为1的项
-    print("get[1:3]:", session.query(User)[1:3])                        # 返回结果集中的第2-3项
+    print(("get(id):", session.query(User).get(1)))                       # 返回结果集中id为1的项
+    print(("get[1:3]:", session.query(User)[1:3]))                        # 返回结果集中的第2-3项
 
     # 其他高级查询,这里以Users表为例
     users = session.query(User).filter(User.id > 6)                     # 条件查询
@@ -159,29 +159,29 @@ try:
     users = session.query(User.id, User.name)                           # 只查询部分属性
     users = session.query(User.name.label("user_name"))                 # 结果集的列取别名
     for user in users:
-        print("label test:", user.user_name)                            # 这里使用别名
+        print(("label test:", user.user_name))                            # 这里使用别名
 
     users = session.query(sqlalchemy.func.count(User.name).label("count"), User.age).group_by(User.age)    # 分组查询
     for user in users:
-        print("age:{0}, count:{1}".format(user.age, user.count))
+        print(("age:{0}, count:{1}".format(user.age, user.count)))
 
     # 多表查询
     result = session.query(User, Role).filter(User.role_id == Role.id)
     for user, role in result:
-        print("user %s's role is %s" % (user.name, role.name))
+        print(("user %s's role is %s" % (user.name, role.name)))
     users = session.query(User).join(Role, User.role_id == Role.id)
     for user in users:
-        print("user join, name:", user.name)
+        print(("user join, name:", user.name))
 
     # 关联属性的用法
     roles = session.query(Role)
     for role in roles:
-        print("role:%s users:" % role.name)
+        print(("role:%s users:" % role.name))
         for user in role.users:
-            print("\t%s" % user.name)
+            print(("\t%s" % user.name))
     users = session.query(User)
     for user in users:
-        print("user %s's role is %s" % (user.name, user.role.name))
+        print(("user %s's role is %s" % (user.name, user.role.name)))
 
 except Exception as excep:
     session.rollback()

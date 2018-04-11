@@ -7,11 +7,11 @@ def testConstruct1():
     print(d)
 
 def testConstruct2():
-    print(dict(zip(*[iter(sys.argv[1:])]*2)))
+    print((dict(list(zip(*[iter(sys.argv[1:])]*2)))))
 
 def testConstruct3():
     l = [{'A': 123}, {'B': 234}, {'C': 345}]
-    d = {k: v for dct in l for k, v in dct.items()}
+    d = {k: v for dct in l for k, v in list(dct.items())}
     print(d)
 
 def testConstruct4():
@@ -21,7 +21,7 @@ def testConstruct4():
 
 def testConstruct5():
     l = ["a", "b", "c", "d", "e"]
-    print(dict(zip(l[::2], l[1::2])))
+    print((dict(list(zip(l[::2], l[1::2])))))
 
 testConstruct1()
 testConstruct2()

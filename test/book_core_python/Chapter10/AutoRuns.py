@@ -22,14 +22,14 @@ def GetValues(fullname):
     elif name[0] == 'HKEY_USERS':
         key = RegOpenKey(HKEY_USERS,name[1], 0, KEY_READ)
     else:
-        print 'err,no key named %s' (name[0])  
+        print(('err,no key named %s' (name[0])))  
     # 查询项的项值数目     
     info = RegQueryInfoKey(key)
     # 遍历项值获得项值数据
     for i in range(0,info[1]):
        ValueName = RegEnumValue(key, i)
        # 调整项值名称长度，使输出更好看
-       print string.ljust(ValueName[0],20),ValueName[1]
+       print((string.ljust(ValueName[0],20),ValueName[1]))
     # 关闭打开的项
     RegCloseKey(key)
 # 因为GetValues函数比较通用，可以在其它脚本中调用
@@ -43,5 +43,5 @@ if __name__ == '__main__':
                 'HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce']
     # 遍历列表，调用GetValues函数，输出项值
     for KeyName in KeyNames:
-        print KeyName
+        print(KeyName)
         GetValues(KeyName) 

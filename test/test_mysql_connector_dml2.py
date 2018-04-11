@@ -16,8 +16,8 @@ hire_end = datetime.date(2017, 12, 31)
 cursor.execute(query, (hire_start, hire_end))
 
 for (first_name, last_name, hire_date) in cursor:
-  print("{}, {} was hired on {:%d %b %Y}".format(
-    last_name, first_name, hire_date))
+  print(("{}, {} was hired on {:%d %b %Y}".format(
+    last_name, first_name, hire_date)))
 
 cursor.close()
 cnx.close()

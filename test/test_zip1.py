@@ -1,5 +1,5 @@
 def zip1(*iterables):
-    zip('ABCD', 'xy') --> Ax By
+    # zip('ABCD', 'xy') --> Ax By
     sentinel = object()
     iterators = [iter(it) for it in iterables]
     while iterators:

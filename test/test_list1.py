@@ -18,7 +18,7 @@ def testListLoop2():
     a = ["a", "b", "c", "d"]
     # index & value
     for i in range(len(a)):
-        print(i, a[i])
+        print((i, a[i]))
 
 testListLoop2()
 
@@ -27,7 +27,7 @@ def testListLoop3():
     a = ["a", "b", "c", "d"]
     # iterate with index
     for i, el in enumerate(a):
-        print(i, el)
+        print((i, el))
 
 testListLoop3()
 
@@ -55,6 +55,6 @@ def testList12():
     #     print(sub)
     random.shuffle(subs)
     print(subs)
-    print(re.sub(r'\(.*\)', '( )', 'x * y = ( 55 )'))
+    print((re.sub(r'\(.*\)', '( )', 'x * y = ( 55 )')))
 
 testList12()

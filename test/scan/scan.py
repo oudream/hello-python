@@ -23,23 +23,23 @@ class scan():
         Send ICMP packet to the target
         """
         for target in self.targets:
-            print("\tSending ICMP packet to %s." % target)
+            print(("\tSending ICMP packet to %s." % target))
 
     def recv_icmp_packet(self):
         """
         Receive ICMP packet from target
         """
         for target in self.targets:
-            print("\tReceiving ICMP packet from %s." % target)
+            print(("\tReceiving ICMP packet from %s." % target))
 
     def show_results(self):
         """
         Show scan results
         """
         print("\n####################################\n")
-        print("Results for scan: %s." % self.scan_type)
+        print(("Results for scan: %s." % self.scan_type))
         for target in self.targets:
-            print("\tTarget: %s." % target)
+            print(("\tTarget: %s." % target))
         print("\n####################################\n")
 
 
@@ -53,14 +53,14 @@ class ping(scan):
         Send ICMP request packet to the target
         """
         for target in self.targets:
-            print("\tSending ICMP request packet to %s." % target)
+            print(("\tSending ICMP request packet to %s." % target))
 
     def recv_icmp_packet(self):
         """
         Receive ICMP reply packet from target
         """
         for target in self.targets:
-            print("\tReceiving ICMP reply packet from %s." % target)
+            print(("\tReceiving ICMP reply packet from %s." % target))
 
 
 class sweep(scan):
@@ -73,11 +73,11 @@ class sweep(scan):
         Send ICMP sweep packet to the target
         """
         for target in self.targets:
-            print("\tSending ICMP sweep packet to %s." % target)
+            print(("\tSending ICMP sweep packet to %s." % target))
 
     def recv_icmp_packet(self):
         """
         Receive ICMP sweep packet from target
         """
         for target in self.targets:
-            print("\tReceiving ICMP sweep packet from %s." % target)
+            print(("\tReceiving ICMP sweep packet from %s." % target))

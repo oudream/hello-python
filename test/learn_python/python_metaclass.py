@@ -11,9 +11,9 @@ class Foo:
         return
 
 foo = Foo()
-print(type(foo))            # <class '__main__.Foo'>
-print(type(foo.hello))      # <class 'method'>
-print(type(Foo))            # <class 'type'>
+print((type(foo)))            # <class '__main__.Foo'>
+print((type(foo.hello)))      # <class 'method'>
+print((type(Foo)))            # <class 'type'>
 
 temp = Foo                  # 赋值给其他变量
 Foo.var = 11                # 增加参数
@@ -27,17 +27,17 @@ def init(self, name):
 
 
 def hello(self):
-    print("hello %s" % self.name)
+    print(("hello %s" % self.name))
     return
 
 Foo = type("Foo", (object,), {"__init__": init, "hello": hello, "cls_var": 10})
 foo = Foo("xianhu")
-print(foo.hello())
-print(Foo.cls_var)
+print((foo.hello()))
+print((Foo.cls_var))
 
-print(foo.__class__)
-print(Foo.__class__)
-print(type.__class__)
+print((foo.__class__))
+print((Foo.__class__))
+print((type.__class__))
 # ========================================================================
 
 
@@ -52,4 +52,4 @@ class Foo(object, metaclass=Author):
     pass
 
 foo = Foo()
-print(foo.author)
+print((foo.author))

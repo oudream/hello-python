@@ -1,7 +1,7 @@
 
 # import test2
 
-# import test_os1
+# from . import test_tensorflow1
 # import test_tkinter_minimal1
 # import test_tkinter_combobox1
 # import test_list1
@@ -13,10 +13,10 @@
 
 # import test_math1
 
-# import ai_addition2
+# import test_closure1
 
-# import test_bracket1
+# import test_dir1
+
+# import test_const1
 
 import test_file1
-
-exit()

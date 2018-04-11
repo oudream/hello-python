@@ -29,7 +29,7 @@ class CopyFile:
             print(man)
 
         bGoodArgv = False
-        dictArgv = dict(zip(*[iter(sys.argv[1:])] * 2))
+        dictArgv = dict(list(zip(*[iter(sys.argv[1:])] * 2)))
         sf = dictArgv['-sf']
         ct = dictArgv['-ct']
         tf = dictArgv['-tf']
@@ -86,12 +86,12 @@ class CopyFile:
             printArgvMan()
             return
         if not os.path.exists(sfDir):
-            print('-sf do not exist. ', sf)
+            print(('-sf do not exist. ', sf))
             printArgvMan()
             return
         rootDir = os.path.dirname(sfDir)
         if not os.path.exists(rootDir):
-            print('-sf is root. ', sf)
+            print(('-sf is root. ', sf))
             return
         sfBasename = os.path.basename(sf)
         sfPrefixName, sfSuffixName = os.path.splitext(sfBasename)
@@ -107,7 +107,7 @@ class CopyFile:
             printArgvMan()
             return
         if not os.path.exists(tfDir):
-            print('target dir do not exist. ', tfDir)
+            print(('target dir do not exist. ', tfDir))
             return
             # os.makedirs(tfDir)
         for filename in os.listdir(sfDir):
@@ -120,11 +120,11 @@ class CopyFile:
                     tfMtime = os.path.getmtime(tfFilePath)
                     tfSize = os.path.getsize(tfFilePath)
                     if (sfMtime != tfMtime) and (sfSize != tfSize):
-                        print('copy by cover : ', filename, shutil.copy(sfFilePath, tfDir))
+                        print(('copy by cover : ', filename, shutil.copy(sfFilePath, tfDir)))
                     else:
-                        print('same file :', filename, sfFilePath)
+                        print(('same file :', filename, sfFilePath))
                 else:
-                    print('copy by new : ', filename, shutil.copy(sfFilePath, tfDir))
+                    print(('copy by new : ', filename, shutil.copy(sfFilePath, tfDir)))
 
 
 CopyFile.runFromSysArgv()

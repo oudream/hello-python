@@ -9,7 +9,6 @@ def testNumpy11():
     print('...testNumpy11')
     x = np.array([1, 2, 3])
     print(x)
-    print(x.shape)
     y = np.arange(10)
     print(y)
     a = np.arange(15).reshape(3, 5)
@@ -36,8 +35,8 @@ testNumpy12()
 def testNumpy13():
     print('---testNumpy13')
     a = np.array([[1, 2, 3], [3, 4, 6.7], [5, 9.0, 5]])
-    print(a.transpose())
-    print(inv(a))
+    print((a.transpose()))
+    print((inv(a)))
     b = np.array([3, 2, 1])
     c = solve(a, b)  # 解方程式 ax = b
     print(c)

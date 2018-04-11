@@ -93,19 +93,19 @@ class BiDictionary(object):
         """
         :key: 得到双向字典全部的keys
         """
-        return self.dict.keys()
+        return list(self.dict.keys())
 
     def values(self):
         """
         :key: 得到双向字典全部的values
         """
-        return self.dict_reversed.keys()
+        return list(self.dict_reversed.keys())
 
     def items(self):
         """
         :key: 得到双向字典全部的items
         """
-        return self.dict.items()
+        return list(self.dict.items())
 
 
 class CorpusSet(object):

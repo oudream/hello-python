@@ -21,5 +21,5 @@ try:
     # ¹Ø±Õ×¢²á±í
     win32api.RegCloseKey(key)
 except:
-    print 'error'
-print 'added that!'
+    print('error')
+print('added that!')

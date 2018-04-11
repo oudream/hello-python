@@ -1,15 +1,15 @@
 class Animal:
     def eat(self):
-        print("%s 吃 " % self.name)
+        print(("%s 吃 " % self.name))
 
     def drink(self):
-        print("%s 喝 " % self.name)
+        print(("%s 喝 " % self.name))
 
     def shit(self):
-        print("%s 拉 " % self.name)
+        print(("%s 拉 " % self.name))
 
     def pee(self):
-        print("%s 撒 " % self.name)
+        print(("%s 撒 " % self.name))
 
 
 class Cat(Animal):

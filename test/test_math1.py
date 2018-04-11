@@ -49,7 +49,7 @@ def testMath20170724():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 
 # testMath20170724()
@@ -103,7 +103,7 @@ def testMath20170725():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 
 # testMath20170725()
@@ -154,7 +154,7 @@ def testMath20170726():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 
 # testMath20170726()
@@ -206,7 +206,7 @@ def testMath20170727():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 
 # testMath20170727()
@@ -258,7 +258,7 @@ def testMath20170728():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 
 # testMath20170728()
@@ -310,7 +310,7 @@ def testMath20170731():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 
 # testMath20170731()
@@ -364,7 +364,7 @@ def testMath20170801():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 # testMath20170801()
 
@@ -430,7 +430,7 @@ def testMath20170802():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 # testMath20170802()
 
@@ -496,7 +496,7 @@ def testMath20170803():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 # testMath20170803()
 
@@ -563,7 +563,7 @@ def testMath20170804():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 # testMath20170804()
 
@@ -629,7 +629,7 @@ def testMath20170809():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 # testMath20170809()
 
@@ -695,7 +695,7 @@ def testMath20170810():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 # testMath20170810()
 
@@ -760,6 +760,6 @@ def testMath20170822():
             fSub.close()
             fAns.close()
     except (IOError) as e:
-        print(str(e))
+        print((str(e)))
 
 testMath20170822()

@@ -14,15 +14,15 @@ class Cb(Ca):
         return self._a
 
 def Say():
-    print "Big Say"
+    print("Big Say")
 
 def say():
-    print "small say"
+    print("small say")
 
 #Say()
 
 a = Cb()
 s = a.CName()
 ss = a._b
-print ss
-print s
+print(ss)
+print(s)

@@ -1,4 +1,4 @@
-from __future__ import print_function
+
 
 import mysql.connector
 from mysql.connector import errorcode
@@ -98,7 +98,7 @@ except mysql.connector.Error as err:
         print(err)
         exit(1)
 
-for name, ddl in TABLES.items():
+for name, ddl in list(TABLES.items()):
     try:
         print("Creating table {}: ".format(name), end='')
         cursor.execute(ddl)

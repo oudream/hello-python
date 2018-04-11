@@ -18,13 +18,13 @@ class MyOpen(object):
 
     def __enter__(self):
         """enter方法，返回file_handler"""
-        print("enter:", self.file_name)
+        print(("enter:", self.file_name))
         self.file_handler = open(self.file_name, "r")
         return self.file_handler
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         """exit方法，关闭文件并返回True"""
-        print("exit:", exc_type, exc_val, exc_tb)
+        print(("exit:", exc_type, exc_val, exc_tb))
         if self.file_handler:
             self.file_handler.close()
         return True
@@ -41,13 +41,13 @@ with MyOpen("python_base.py") as file_in:
 @contextlib.contextmanager
 def open_func(file_name):
     # __enter__方法
-    print("open file:", file_name, "in __enter__")
+    print(("open file:", file_name, "in __enter__"))
     file_handler = open(file_name, "r")
 
     yield file_handler
 
     # __exit__方法
-    print("close file:", file_name, "in __exit__")
+    print(("close file:", file_name, "in __exit__"))
     file_handler.close()
     return
 

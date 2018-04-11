@@ -23,9 +23,9 @@ man = '''
     -sf /dirName/appName
 '''
 
-print(sys.platform)
+print((sys.platform))
 
-print(os.path.isabs(r'\a'))
+print((os.path.isabs(r'\a')))
 
 
 frameinfo = inspect.getframeinfo(inspect.currentframe())
@@ -38,11 +38,11 @@ print('---')
 sf = frameinfo.filename
 
 # sf =
-print(os.getcwd())
-print(os.path.abspath(os.getcwd()))
-print(os.path.dirname(os.path.abspath(os.getcwd())))
+print((os.getcwd()))
+print((os.path.abspath(os.getcwd())))
+print((os.path.dirname(os.path.abspath(os.getcwd()))))
 print(sf)
-print(os.path.dirname(os.path.abspath(sf)))
+print((os.path.dirname(os.path.abspath(sf))))
 
 m = re.search('multi', 'A mUltiCased string', re.IGNORECASE)
 print(m)

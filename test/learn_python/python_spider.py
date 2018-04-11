@@ -40,9 +40,9 @@ response = urllib.request.urlopen(request, timeout=10)
 try:
     urllib.request.urlopen(request, timeout=10)
 except urllib.error.HTTPError as e:
-    print(e.code, e.reason)
+    print((e.code, e.reason))
 except urllib.error.URLError as e:
-    print(e.errno, e.reason)
+    print((e.errno, e.reason))
 
 
 # 使用代理，以防止IP被封或IP次数受限：

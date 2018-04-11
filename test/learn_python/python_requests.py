@@ -30,23 +30,23 @@ r6 = requests.patch("http://httpbin.org/get")
 # 以字典的形式传递URL参数, 也可以直接以?xx=xx&xx=xx的形式将其放在url后
 params = {"key1": "value1", "key2": "value2"}
 r = requests.get("http://httpbin.org/get", params=params)
-print(r.url)                # http://httpbin.org/get?key2=value2&key1=value1
+print((r.url))                # http://httpbin.org/get?key2=value2&key1=value1
 
 # 以字典的形式传递URL参数: 字典里带有列表
 params = {"key1": "value1", "key2": ["value2", "value3"]}
 r = requests.get("http://httpbin.org/get", params=params)
-print(r.url)                # http://httpbin.org/get?key1=value1&key2=value2&key2=value3
+print((r.url))                # http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
 # 获取网页内容
 r = requests.get("https://github.com/timeline.json")
-print(r.text)               # 返回正常的网页内容, 即解压解码之后的内容
-print(r.content)            # 返回byte类型的网页内容, 即值解压, 没有解码
-print(r.json())             # 如果网页内容为json, 直接返回一个json对象
-print(r.encoding)           # 返回网页的编码: "utf-8"
+print((r.text))               # 返回正常的网页内容, 即解压解码之后的内容
+print((r.content))            # 返回byte类型的网页内容, 即值解压, 没有解码
+print((r.json()))             # 如果网页内容为json, 直接返回一个json对象
+print((r.encoding))           # 返回网页的编码: "utf-8"
 
 # Requests会自动解码来自服务器的内容, 也可以自己更改
 r.encoding = "ISO-8859-1"
-print(r.text)               # 此时使用新的r.encoding解码后的新值
+print((r.text))               # 此时使用新的r.encoding解码后的新值
 
 # 编码的其他操作
 # requests.utils.get_encodings_from_content(content): Returns encodings from given content string.
@@ -55,8 +55,8 @@ print(r.text)               # 此时使用新的r.encoding解码后的新值
 
 # 原始响应内容: 获取来自服务器的原始套接字响应
 r = requests.get("https://github.com/timeline.json", stream=True)
-print(r.raw)                # <requests.packages.urllib3.response.HTTPResponse object at 0x101194810>
-print(r.raw.read(10))       # "\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\x03"
+print((r.raw))                # <requests.packages.urllib3.response.HTTPResponse object at 0x101194810>
+print((r.raw.read(10)))       # "\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\x03"
 
 # 一般情况下, 应该以下面的模式将文本流保存到文件
 with open("test", "wb") as fd:
@@ -67,8 +67,8 @@ with open("test", "wb") as fd:
 # 定制请求头: 一个字典
 headers = {"user-agent": "my-app/0.0.1"}
 r = requests.get("https://api.github.com/some/endpoint", headers=headers)
-print(r.request.headers)    # 获取request的头部
-print(r.headers)            # 获取response的头部
+print((r.request.headers))    # 获取request的头部
+print((r.headers))            # 获取response的头部
 # {
 #     "content-encoding": "gzip",
 #     "transfer-encoding": "chunked",
@@ -78,47 +78,47 @@ print(r.headers)            # 获取response的头部
 #     "etag": "e1ca502697e5c9317743dc078f67693f",
 #     "content-type": "application/json"
 # }
-print(r.headers["Content-Type"])        # "application/json"
-print(r.headers.get("content-type"))    # "application/json"
+print((r.headers["Content-Type"]))        # "application/json"
+print((r.headers.get("content-type")))    # "application/json"
 
 # 更加复杂的POST请求: 表单
 post_dict = {"key1": "value1", "key2": "value2"}
 r = requests.post("http://httpbin.org/post", data=post_dict)
-print(r.text)
+print((r.text))
 
 # POST一个多部分编码(Multipart-Encoded)的文件
 files = {"file": open("report.xls", "rb")}
 r = requests.post("http://httpbin.org/post", files=files)
-print(r.text)
+print((r.text))
 
 # 你可以显式地设置文件名, 文件类型和请求头
 files = {"file": ("report.xls", open("report.xls", "rb"), "application/vnd.ms-excel", {"Expires": "0"})}
 r = requests.post("http://httpbin.org/post", files=files)
-print(r.text)
+print((r.text))
 
 # 你也可以发送文本字符串
 files = {"file": ("report.csv", "some,data,to,send\nanother,row,to,send\n")}
 r = requests.post("http://httpbin.org/post", files=files)
-print(r.text)
+print((r.text))
 
 # 响应状态码
 r = requests.get("http://httpbin.org/get")
-print(r.status_code)                            # 200
-print(r.status_code == requests.codes.ok)       # True 响应状态码查询
+print((r.status_code))                            # 200
+print((r.status_code == requests.codes.ok))       # True 响应状态码查询
 
 # 如果发送了一个错误请求(4XX客户端错误, 或5XX服务器错误响应), 可以通过 Response.raise_for_status() 来抛出异常:
 bad_r = requests.get("http://httpbin.org/status/404")
-print(bad_r.status_code)                        # 404
+print((bad_r.status_code))                        # 404
 bad_r.raise_for_status()                        # 引发异常
 
 # Cookie: 如果某个响应中包含一些cookie, 则会被放到response.cookies(CookieJar类型)中
 r = requests.get("http://example.com/some/cookie/setting/url")
-print(r.cookies["example_cookie_name"])         # "example_cookie_value"
+print((r.cookies["example_cookie_name"]))         # "example_cookie_value"
 
 # 要想发送你的cookies到服务器, 可以使用cookies参数(一个字典)
 cookies = dict(cookies_are="working")
 r = requests.get("http://httpbin.org/cookies", cookies=cookies)
-print(r.text)
+print((r.text))
 
 # cookie的其他操作
 # requests.utils.dict_from_cookiejar(cj): Returns a key/value dictionary from a CookieJar.
@@ -155,11 +155,11 @@ with requests.Session() as s:
 # 重定向与请求历史, 默认情况下, 除了HEAD, Requests会自动处理所有重定向, 可以通过allow_redirects参数禁用重定向处理
 # 可以使用响应对象的history方法来追踪重定向, Response.history 是一个Response对象的列表, 按照从最老到最近的请求进行排序
 r = requests.get("http://github.com", allow_redirects=True)
-print(r.status_code)        # 200
-print(r.history)            # [<Response [301]>]
+print((r.status_code))        # 200
+print((r.history))            # [<Response [301]>]
 r = requests.get("http://github.com", allow_redirects=False)
-print(r.status_code)        # 301
-print(r.history)            # []
+print((r.status_code))        # 301
+print((r.history))            # []
 
 # 超时, 设置timeout参数
 requests.get("http://github.com", timeout=0.001)
@@ -211,7 +211,7 @@ with open("massive-body") as f:
 # 事件挂钩, 可用的钩子: response(从一个请求产生的响应)
 # 你可以通过传递一个 {hook_name: callback_function} 字典给 hooks 请求参数为每个请求分配一个钩子函数
 def print_url(resp):
-    print(resp.url)
+    print((resp.url))
     return
 requests.get("http://httpbin.org", hooks=dict(response=print_url))
 

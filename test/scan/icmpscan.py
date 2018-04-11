@@ -51,7 +51,7 @@ if __name__ == '__main__':
     # Validate scan type
     if options.scan:
         if not valid_scan_type(options.scan):
-            print("SCAN TYPE \"%s\" is not valid." % options.scan)
+            print(("SCAN TYPE \"%s\" is not valid." % options.scan))
             parser.print_help()
             sys.exit(EXIT_FAILURE)
         else:
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     else:
         for target in args:
             if not valid_ip_address(target):
-                print("TARGET \"%s\" is not valid." % target)
+                print(("TARGET \"%s\" is not valid." % target))
                 parser.print_help()
                 sys.exit(EXIT_FAILURE)
             else:

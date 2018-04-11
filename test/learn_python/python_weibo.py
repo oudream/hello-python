@@ -77,7 +77,7 @@ class WeiBoLogin(object):
             url = "http://login.sina.com.cn/cgi/pin.php?r=%d&s=0&p=%s" % (int(time.time()), json_data["pcid"])
             with open("captcha.jpeg", "wb") as file_out:
                 file_out.write(self.session.get(url).content)
-            code = input("请输入验证码:")
+            code = eval(input("请输入验证码:"))
             post_data["pcid"] = json_data["pcid"]
             post_data["door"] = code
 

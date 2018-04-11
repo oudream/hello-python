@@ -11,9 +11,9 @@ import functools
 def logging(func):
     @functools.wraps(func)
     def decorator(*args, **kwargs):
-        print("%s called" % func.__name__)
+        print(("%s called" % func.__name__))
         result = func(*args, **kwargs)
-        print("%s end" % func.__name__)
+        print(("%s end" % func.__name__))
         return result
     return decorator
 
@@ -21,14 +21,14 @@ def logging(func):
 # 使用装饰器
 @logging
 def test01(a, b):
-    print("in function test01, a=%s, b=%s" % (a, b))
+    print(("in function test01, a=%s, b=%s" % (a, b)))
     return 1
 
 
 # 使用装饰器
 @logging
 def test02(a, b, c=1):
-    print("in function test02, a=%s, b=%s, c=%s" % (a, b, c))
+    print(("in function test02, a=%s, b=%s, c=%s" % (a, b, c)))
     return 1
 
 
@@ -49,14 +49,14 @@ def params_chack(*types, **kwtypes):
 # 使用装饰器
 @params_chack(int, (list, tuple))
 def test03(a, b):
-    print("in function test03, a=%s, b=%s" % (a, b))
+    print(("in function test03, a=%s, b=%s" % (a, b)))
     return 1
 
 
 # 使用装饰器
 @params_chack(int, str, c=(int, str))
 def test04(a, b, c):
-    print("in function test04, a=%s, b=%s, c=%s" % (a, b, c))
+    print(("in function test04, a=%s, b=%s, c=%s" % (a, b, c)))
     return 1
 
 
@@ -64,7 +64,7 @@ def test04(a, b, c):
 class ATest(object):
     @params_chack(object, int, str)
     def test(self, a, b):
-        print("in function test of ATest, a=%s, b=%s" % (a, b))
+        print(("in function test of ATest, a=%s, b=%s" % (a, b)))
         return 1
 
 
@@ -72,7 +72,7 @@ class ATest(object):
 @logging
 @params_chack(int, str, (list, tuple))
 def test05(a, b, c):
-    print("in function test05, a=%s, b=%s, c=%s" % (a, b, c))
+    print(("in function test05, a=%s, b=%s, c=%s" % (a, b, c)))
     return 1
 
 
@@ -84,16 +84,16 @@ class Decorator(object):
         return
 
     def __call__(self, *args, **kwargs):
-        print("%s called" % self.func.__name__)
+        print(("%s called" % self.func.__name__))
         result = self.func(*args, **kwargs)
-        print("%s end" % self.func.__name__)
+        print(("%s end" % self.func.__name__))
         return result
 
 
 # 使用装饰器
 @Decorator
 def test06(a, b, c):
-    print("in function test06, a=%s, b=%s, c=%s" % (a, b, c))
+    print(("in function test06, a=%s, b=%s, c=%s" % (a, b, c)))
     return 1
 
 
@@ -119,7 +119,7 @@ class ParamCheck(object):
 # 使用装饰器
 @ParamCheck(int, str, (list, tuple))
 def test07(a, b, c):
-    print("in function test06, a=%s, b=%s, c=%s" % (a, b, c))
+    print(("in function test06, a=%s, b=%s, c=%s" % (a, b, c)))
     return 1
 
 
@@ -194,16 +194,16 @@ class A(object):
     var = 1
 
     def func(self):
-        print(self.var)
+        print((self.var))
         return
 
     @staticmethod
     def static_func():
-        print(A.var)
+        print((A.var))
         return
 
     @classmethod
     def class_func(cls):
-        print(cls.var)
+        print((cls.var))
         cls().func()
         return

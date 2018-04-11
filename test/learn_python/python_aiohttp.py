@@ -12,8 +12,8 @@ import aiohttp
 async def aiohttp_test01(url):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
-            print(resp.status)
-            print(await resp.text())
+            print((resp.status))
+            print((await resp.text()))
 
 loop = asyncio.get_event_loop()
 tasks = [aiohttp_test01("https://api.github.com/events")]
