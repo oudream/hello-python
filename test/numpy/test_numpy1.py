@@ -9,6 +9,7 @@ def testNumpy11():
     print('...testNumpy11')
     x = np.array([1, 2, 3])
     print(x)
+    print(x.shape)
     y = np.arange(10)
     print(y)
     a = np.arange(15).reshape(3, 5)

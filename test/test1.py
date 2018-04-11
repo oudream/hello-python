@@ -1,12 +1,12 @@
-import variable_g1
 
-import PyQt4
+import sys
+import os
 
-print("This line will be printed 1.")
-
-def hello_world():
-    print('aa')
-    print(variable_g1.gl_1)
-
-hello_world()
+print(sys.path)
+print('----')
+print(__name__)
+print('----')
+print(__file__)
+print('----')
+print(__package__)
 
