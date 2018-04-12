@@ -1,14 +1,7 @@
 
 .DS_Store
 
-.idea/cpy.iml
+.idea
 
-.idea/encodings.xml
 
-.idea/inspectionProfiles/profiles_settings.xml
-
-.idea/misc.xml
-
-.idea/modules.xml
-
-.idea/workspace.xml
+__pycache__

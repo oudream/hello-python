@@ -4,7 +4,7 @@ import sys
 sys.path.append('..')
 
 from . import glovar
-from ..test import test1
+from module1.test import test1
 
 
 class Calc:

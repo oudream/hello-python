@@ -1,4 +1,4 @@
-
+import os
 
 def getNumber(fn):
     print((fn(10)))
@@ -28,6 +28,6 @@ def maker(m):
 
     return maker1
 
+# f = maker(2)(3)(4)
+# print(f)
 
-f = maker(2)(3)(4)
-print(f)

@@ -1,7 +1,8 @@
 import os
-import const_value
+from cpy.const import *
 
-def TestFileWrite1():
+
+def testFileWrite1():
     try:
         f = open("t:/a.txt", 'w')
         if f != None:
@@ -12,11 +13,32 @@ def TestFileWrite1():
         print(str(e))
 
 
-def replaceFilesBytes(sPath):
-    const = const_value.ConstValue()
+# testFileWrite1()
+
+
+def testCreateFile1():
+    open('test.txt', 'a').close()
+
+    open("test.txt", "w+").close()
+    # w+ 会覆盖原文件.
+
+    # 调用命令也可以
+    import os
+    os.system("cd.>test.txt")  # 会覆盖原文件.
+    # 参考http: // stackoverflow.com / questions / 1158076 / implement - touch - using - python
+
+    from pathlib import Path
+    Path('test').touch()  # 不会覆盖原文件.
+
+
+# testCreateFile1()
+
+
+def replaceFilesBytes(sSrcPath='', sDestPath='', bsSrc=b'', bsDest=b''):
+    const = CpyConst()
     const.CHUNK_SIZE = 2048
 
-    print(sPath)
+    print(sSrcPath)
 
     def read(file_obj):
         """
@@ -29,24 +51,57 @@ def replaceFilesBytes(sPath):
                 break
             yield data
 
-    def replace(chuck):
-        newChuck = bytes(1024)
+    def replaceFileBytes(sReplaceFilePath):
+        sNewFilePath = sReplaceFilePath.replace(sSrcPath, sDestPath)
+        sNewPath = os.path.dirname(sNewFilePath)
+        if not os.path.exists(sNewPath):
+            os.makedirs(sNewPath)
+        wFile = open(sNewFilePath, 'wb')
+        bsRemain = bytes(0)
 
-    def replaceFileBytes(sFilePath):
-        with open(sFilePath, 'rb', encoding='utf-8') as f:
-            for chuck in read(f):
-                replace(chuck)
+        def receive(bsNew):
+            nonlocal bsRemain
+            bsTotal = bsRemain + bsNew
+            index = bsTotal.rfind(bsSrc)
+            if index == -1:
+                bsSave = bsTotal[: len(bsTotal) - len(bsSrc)]
+                bsRemain = bsTotal[len(bsTotal) - len(bsSrc):]
+                wFile.write(bsSave)
+            else:
+                bsSave = bsTotal[0: index + len(bsSrc)]
+                bsRemain = bsTotal[index + len(bsSrc):]
+                bsSave = bsSave.replace(bsSrc, bsDest)
+                wFile.write(bsSave)
 
-    for root, dirs, files in os.walk(sPath):
-        for file in files:
-            print((os.path.join(root, file).encode('utf-8')))
-        for dir in dirs:
-            print((os.path.join(root, dir).encode('utf-8')))
+        try:
+            f = open(sReplaceFilePath, 'rb')
+            if f is not None:
+                for bsData in read(f):
+                    receive(bsData)
+                f.close()
+        except IOError as e:
+            print(str(e))
+
+        # with open(sReplaceFilePath, 'rb', encoding='utf-8') as f:
+        #     for bsData in read(f):
+        #         receive(bsData)
+
+        if len(bsRemain) > 0:
+            wFile.write(bsRemain)
+        wFile.close()
+
+    for sRoot, dirs, files in os.walk(sSrcPath):
+        for sFile in files:
+            sFilePath = os.path.join(sRoot, sFile)
+            print(sFilePath)
+            replaceFileBytes(sFilePath)
+        for sDir in dirs:
+            print((os.path.join(sRoot, sDir).encode('utf-8')))
 
 
 if __name__ == '__main__':
-    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180326')
+    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329', r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329-', b'\n', b';')
     # TestFileWrite1()
 else:
-    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180326')
-
+    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329', r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329-', b'\n', b';')
+    # replaceFilesBytes(r'f:\temp\a', r'f:/temp/aa', b'\n', b';')

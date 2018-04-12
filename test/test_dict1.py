@@ -1,4 +1,3 @@
-
 # --- --- --- --- ---
 # dict loop --
 # --- --- --- --- ---
@@ -11,7 +10,6 @@ def testLoopDict1():
     from time import clock
     import time
     import calendar
-
 
     t0 = clock()
     for i in d:
@@ -37,5 +35,43 @@ def testLoopDict1():
     for i, j in enumerate(enumm):
         print((i, j))
 
-testLoopDict1()
 
+# testLoopDict1()
+
+
+'''
+A = { 
+    'a': {
+        'A': {
+            '1': {}, 
+            '2': {}, 
+        },  
+        'B': {
+            '1': {}, 
+            '2': {}, 
+        },  
+    },  
+    'b': {
+        'A': {
+            '1': {}, 
+            '2': {}, 
+        },  
+        'B': {
+            '1': {}, 
+            '2': {}, 
+        },  
+    },  
+}
+'''
+def testMultidict():
+    from copy import copy
+
+    def multidict(*args):
+        if len(args) == 1:
+            return copy(args[0])
+        out = {}
+        for x in args[0]:
+            out[x] = multidict(*args[1:])
+        return out
+
+    print(multidict(['a', 'b'], ['A', 'B'], ['1', '2'], {}))
