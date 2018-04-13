@@ -100,8 +100,8 @@ def replaceFilesBytes(sSrcPath='', sDestPath='', bsSrc=b'', bsDest=b''):
 
 
 if __name__ == '__main__':
-    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329', r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329-', b'\n', b';')
+    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180326', r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180326-', b'\n', b';')
     # TestFileWrite1()
 else:
-    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329', r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180329-', b'\n', b';')
+    replaceFilesBytes(r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180326', r'F:\gcl3deploy\data\gcl_svr_rtdbs\20180326-', b'\n', b';')
     # replaceFilesBytes(r'f:\temp\a', r'f:/temp/aa', b'\n', b';')
