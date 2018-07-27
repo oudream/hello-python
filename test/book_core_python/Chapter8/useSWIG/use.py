@@ -1,2 +1,0 @@
-import useSWIG
-useSWIG.showSWIG()

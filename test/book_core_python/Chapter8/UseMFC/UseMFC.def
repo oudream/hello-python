@@ -1,8 +1,0 @@
-; UseMFC.def : Declares the module parameters for the DLL.
-
-LIBRARY      "UseMFC"
-DESCRIPTION  'UseMFC Windows Dynamic Link Library'
-
-EXPORTS
-    ; Explicit exports can go here
-	initUseMFC
