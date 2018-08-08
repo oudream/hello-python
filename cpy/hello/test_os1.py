@@ -1,10 +1,5 @@
 import os
 import sys
-import time
-import datetime
-import operator
-import inspect
-import re
 
 print(sys.platform)
 
@@ -13,9 +8,20 @@ print(os.getcwd())
 print('-------')
 
 
-for i in locals():
+def test1():
+    _locals = locals()
+    for i in _locals:
+        print(i)
+
+
+test1()
+
+_locals = locals()
+for i in _locals:
     print(i)
 
 print('-------')
 
 print(globals())
+
+print(__name__)

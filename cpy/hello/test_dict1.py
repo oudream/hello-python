@@ -8,8 +8,6 @@ def testLoopDict1():
     d = dict(l)
 
     from time import clock
-    import time
-    import calendar
 
     t0 = clock()
     for i in d:
@@ -63,6 +61,8 @@ A = {
     },  
 }
 '''
+
+
 def testMultidict():
     from copy import copy
 
@@ -75,3 +75,20 @@ def testMultidict():
         return out
 
     print(multidict(['a', 'b'], ['A', 'B'], ['1', '2'], {}))
+
+
+def testLoopDict2():
+    _locals = locals()
+    print(_locals)
+    for i in _locals:
+        print(i)
+    d = {'x': 1, 'y': 2, 'z': 3}
+    for key in d:
+        print(key)
+
+
+# testLoopDict2()
+
+d = dict(locals())
+for k, v in d.items():
+    print(k, v)
