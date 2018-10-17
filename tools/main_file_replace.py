@@ -164,7 +164,9 @@ def replaceFilesBytes2(sSrcPath='', sDestPath=''):
 
 def mainReplace():
     # replaceFilesBytes2(r'/eee/System', r'/eee/System-')
-    replaceFilesBytes(r'/eee/System', r'/eee/System-', b'\r\n', b'\n')
+    sSrc = bytes.fromhex('efbbbf')
+    sDest = b''
+    replaceFilesBytes(r'/ddd/specialty/leetcode/algorithms/java/src/searchA2DMatrixII', r'/ddd/specialty/leetcode/algorithms/java/src-', sSrc, sDest)
 
 if __name__ == '__main__':
     mainReplace()
