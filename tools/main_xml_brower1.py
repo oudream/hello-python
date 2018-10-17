@@ -5,9 +5,10 @@ except ImportError:
 
 
 class Hello:
-    def __init__(self, xmlpath):
-        self.xmlpath = xmlpath
-        self.tree = ET.ElementTree(file=xmlpath)
+    def __init__(self, loadpath, savepath):
+        self.loadpath = loadpath
+        self.savepath = savepath
+        self.tree = ET.ElementTree(file=loadpath)
 
     def printall(self):
         for elem in self.tree.iter():
@@ -30,7 +31,7 @@ class Hello:
             e.insert(0, e1)
         ET.register_namespace('', "http://www.topografix.com/GPX/1/1")
         ET.register_namespace('', "http://www.topografix.com/GPX/1/0")
-        self.tree.write('/eee/xml/save1.xml', encoding='utf-8', xml_declaration=True)
+        self.tree.write(self.savepath, encoding='utf-8', xml_declaration=True)
 
     def run(self):
         print('\n--- printall ---')
@@ -44,7 +45,7 @@ class Hello:
 
 
 def run():
-    hello = Hello('/eee/xml/xml1.xml')
+    hello = Hello('/eee/xml/xml1.xml', '/eee/xml/save1.xml')
     hello.run()
 
 
