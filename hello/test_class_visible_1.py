@@ -6,3 +6,5 @@ class Human:
 
     def say(self):
         print('i am ', self.__class__.__name__)
+
+

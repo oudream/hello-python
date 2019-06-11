@@ -56,8 +56,8 @@ class BookMark:
 
 
 def run():
-    fp = '/ddd/oudream/bookmarks/chrome.bookmarks.html'
-    root = '/ddd/oudream/note'
+    fp = '/eee/oudream/bookmarks/chrome.bookmarks.html'
+    root = '/eee/note'
     BookMark.createdir(fp, root)
 
 

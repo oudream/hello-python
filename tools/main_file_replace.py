@@ -76,11 +76,14 @@ def replaceFilesBytes(sSrcPath='', sDestPath='', bsSrc=b'', bsDest=b''):
             wFile.write(bsRemain)
         wFile.close()
 
+    extensions = ['.c', '.cpp', '.h', '.hpp', '.cxx']
     for sRoot, dirs, files in os.walk(sSrcPath):
         for sFile in files:
-            sFilePath = os.path.join(sRoot, sFile)
-            print(sFilePath)
-            replaceFileBytes(sFilePath)
+            (shotname, extension) = os.path.splitext(sFile)
+            if extension in extensions:
+                sFilePath = os.path.join(sRoot, sFile)
+                print(sFilePath)
+                replaceFileBytes(sFilePath)
         for sDir in dirs:
             print((os.path.join(sRoot, sDir).encode('utf-8')))
 
@@ -164,9 +167,12 @@ def replaceFilesBytes2(sSrcPath='', sDestPath=''):
 
 def mainReplace():
     # replaceFilesBytes2(r'/eee/System', r'/eee/System-')
-    sSrc = bytes.fromhex('efbbbf')
-    sDest = b''
-    replaceFilesBytes(r'/ddd/specialty/leetcode/algorithms/java/src/searchA2DMatrixII', r'/ddd/specialty/leetcode/algorithms/java/src-', sSrc, sDest)
+    # sSrc = bytes.fromhex('efbbbf')
+    # sDest = b''
+    # replaceFilesBytes(r'/ddd/specialty/leetcode/algorithms/java/src/searchA2DMatrixII', r'/ddd/specialty/leetcode/algorithms/java/src-', sSrc, sDest)
+    sSrc = bytes.fromhex('0A0A')
+    sDest = bytes.fromhex('0A')
+    replaceFilesBytes(r'/ddd/ygct/ygct_ics_cc4000/cc4k/src-/System', r'/ddd/ygct/ygct_ics_cc4000/cc4k/src-/System-', sSrc, sDest)
 
 if __name__ == '__main__':
     mainReplace()

@@ -1,0 +1,6 @@
+[submodule "lib/Python"]
+	path = lib/Python
+	url = https://github.com/geekcomputers/Python
+[submodule "lib/learn-python3"]
+	path = lib/learn-python3
+	url = https://github.com/michaelliao/learn-python3

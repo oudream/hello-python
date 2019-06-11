@@ -1,5 +1,5 @@
 
-import glovar as GlobalVar
+import cpy.hello.glovar as GlobalVar
 
 import get
 import set
