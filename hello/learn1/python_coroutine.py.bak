@@ -40,7 +40,7 @@ def produce(c):         # 定义生产者，此时的 c 为一个生成器
 def hello(index):                   # 通过装饰器asyncio.coroutine定义协程
     print(('Hello world! index=%s, thread=%s' % (index, threading.currentThread())))
     yield from asyncio.sleep(1)     # 模拟IO任务
-    print((('Hello again! index=%s, thread=%s' % (index, threading.currentThread()))@asyncio.coroutine))
+    print(('Hello again! index=%s, thread=%s' % (index, threading.currentThread()))@asyncio.coroutine)
 
 loop = asyncio.get_event_loop()     # 得到一个事件循环模型
 tasks = [hello(1), hello(2)]        # 初始化任务列表

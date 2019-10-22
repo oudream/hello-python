@@ -109,18 +109,18 @@ class WT_LPR:
         
         _ip = ip.encode('GBK')
         if sdk_init(ip=_ip, port=port) == 0:
-            print(('Connected {} {}.'.format(ip, self.lib.WTY_CheckStatus(_ip))))            
+            print('Connected {} {}.'.format(ip, self.lib.WTY_CheckStatus(_ip)))            
             return True
             
-        print(('Cannot connecte to {}.'.format(ip)))
+        print('Cannot connecte to {}.'.format(ip))
         return False
         
     def disconnect_dev(self, ip):
         if self.lib.CLIENT_LPRC_QuitDevice(ip.encode('GBK')) == 0:
-            print(('Disconnect from {}.'.format(ip)))
+            print('Disconnect from {}.'.format(ip))
             return True
             
-        print(('Cannot disconnect from {}.'.format(ip)))
+        print('Cannot disconnect from {}.'.format(ip))
         return False
 
     def open_gate(self, ip, port=9110):
@@ -179,7 +179,7 @@ class EPIntegrateBox:
             self.trans_type,
             level, 
             False)
-        print(('vol: ', r))
+        print('vol: ', r)
 
     def display(self, text, line_num, color=2, ip=None):
         if ip is None:
@@ -226,10 +226,10 @@ if __name__ == '__main__':
     @CFUNCTYPE(None, POINTER(CLIENT_LPRC_PLATE_RESULTEX), c_ulong)
     def callback_data_ex2(dat, user):
         content = dat.contents
-        print(('识别结果：{}[{}]@{}，可信度：{}'.format(
+        print('识别结果：{}[{}]@{}，可信度：{}'.format(
             content.license.decode('gbk'), 
             content.color.decode('gbk'), 
-            content.ip.decode('gbk'), content.confidence)))
+            content.ip.decode('gbk'), content.confidence))
             
     # typedef void (*CLIENT_LPRC_ConnectCallback)(char *chCLIENTIP, UINT nStatus, LDWORD dwUser)
     @CFUNCTYPE(None, c_char_p, c_uint, c_ulong)

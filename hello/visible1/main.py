@@ -7,5 +7,5 @@ import set
 set.set()
 get.get()
 
-print('id GlobalVar: ', id(GlobalVar))
-print("------main mq_client in main.py------mq_client: " + str(GlobalVar.get_mq_client()))
+print(('id GlobalVar: ', id(GlobalVar)))
+print(("------main mq_client in main.py------mq_client: " + str(GlobalVar.get_mq_client())))

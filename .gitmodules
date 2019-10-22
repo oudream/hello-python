@@ -1,3 +1,9 @@
 [submodule "lib/learn-python3"]
 	path = lib/learn-python3
 	url = https://github.com/michaelliao/learn-python3
+[submodule "lib/geek-python"]
+	path = lib/geek-python
+	url = https://github.com/geekcomputers/Python
+[submodule "lib/algorithms-python"]
+	path = lib/algorithms-python
+	url = https://github.com/TheAlgorithms/Python

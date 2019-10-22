@@ -11,4 +11,4 @@ class ChannelB(channel.ChannelBase):
 # print('inspect: ')
 # print(inspect.getsourcefile(ChannelTcp))
 
-print(('i am subb:', __package__))
+print('i am subb:', __package__)

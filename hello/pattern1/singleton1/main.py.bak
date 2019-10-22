@@ -1,7 +1,7 @@
 import inspect
 import sys
 
-print((sys.path))
+print(sys.path)
 
 from .common import channel
 from .test import test_channel1
@@ -24,7 +24,7 @@ class Main:
 # print('inspect: ', inspect.getsourcefile(Main))
 #
 moduleMain = inspect.getmodule(Main)
-print(('inspect: ', moduleMain))
+print('inspect: ', moduleMain)
 
 sample_channel1.sampleChannel11()
 test_channel1.testChannel11()
@@ -39,8 +39,8 @@ test_channel1.testChannel11()
 sample_channel1.sampleChannel11()
 
 if __name__ == '__main__':
-    print(('i am main...: ', __name__))
+    print('i am main...: ', __name__)
     print('locals(): ')
     d = dict(locals())
-    for k, v in list(d.items()):
-        print((k, v))
+    for k, v in d.items():
+        print(k, v)

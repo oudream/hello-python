@@ -5,8 +5,8 @@ import re
 
 def testMath20170724():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170724-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170724-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170724-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170724-answer.txt", 'w')
         if fSub != None:
             fSub.write('-- 以下是 加法 --\r\n')
             fAns.write('-- 以下是 加法 --\r\n')
@@ -59,8 +59,8 @@ def testMath20170724():
 
 def testMath20170725():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170725-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170725-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170725-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170725-answer.txt", 'w')
         if fSub != None:
             fSub.write('-- 以下是 加法 --\r\n')
             fAns.write('-- 以下是 加法 --\r\n')
@@ -110,8 +110,8 @@ def testMath20170725():
 
 def testMath20170726():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170726-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170726-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170726-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170726-answer.txt", 'w')
         if fSub != None:
             fSub.write('-- 以下是 加法 --\r\n')
             fAns.write('-- 以下是 加法 --\r\n')
@@ -162,8 +162,8 @@ def testMath20170726():
 
 def testMath20170727():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170727-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170727-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170727-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170727-answer.txt", 'w')
         if fSub != None:
             fSub.write('-- 以下是 加法 --\r\n')
             fAns.write('-- 以下是 加法 --\r\n')
@@ -214,8 +214,8 @@ def testMath20170727():
 
 def testMath20170728():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170728-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170728-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170728-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170728-answer.txt", 'w')
         if fSub != None:
             fSub.write('-- 以下是 加法 --\r\n')
             fAns.write('-- 以下是 加法 --\r\n')
@@ -266,8 +266,8 @@ def testMath20170728():
 
 def testMath20170731():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170731-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170731-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170731-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170731-answer.txt", 'w')
         if fSub != None:
             fSub.write('-- 以下是 加法 --\r\n')
             fAns.write('-- 以下是 加法 --\r\n')
@@ -318,8 +318,8 @@ def testMath20170731():
 
 def testMath20170801():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170801-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170801-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170801-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170801-answer.txt", 'w')
         if fSub != None:
             fSub.write('欧阳泓梓 - 20170801 - 数学题：\r\n')
             fAns.write('欧阳泓梓 - 20170801 - 数学题：\r\n')
@@ -371,8 +371,8 @@ def testMath20170801():
 
 def testMath20170802():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170802-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170802-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170802-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170802-answer.txt", 'w')
         if fSub != None:
             fSub.write('欧阳泓梓 - 20170802 - 数学题：\r\n')
             fAns.write('欧阳泓梓 - 20170802 - 数学题：\r\n')
@@ -437,8 +437,8 @@ def testMath20170802():
 
 def testMath20170803():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170803-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170803-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170803-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170803-answer.txt", 'w')
         if fSub != None:
             fSub.write('欧阳泓梓 - 20170803 - 数学题：\r\n')
             fAns.write('欧阳泓梓 - 20170803 - 数学题：\r\n')
@@ -504,8 +504,8 @@ def testMath20170803():
 
 def testMath20170804():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170804-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170804-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170804-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170804-answer.txt", 'w')
         if fSub != None:
             fSub.write('欧阳泓梓 - 20170804 - 数学题：\r\n')
             fAns.write('欧阳泓梓 - 20170804 - 数学题：\r\n')
@@ -570,8 +570,8 @@ def testMath20170804():
 
 def testMath20170809():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170809-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170809-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170809-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170809-answer.txt", 'w')
         if fSub != None:
             fSub.write('欧阳泓梓 - 20170809 - 数学题：\r\n')
             fAns.write('欧阳泓梓 - 20170809 - 数学题：\r\n')
@@ -636,8 +636,8 @@ def testMath20170809():
 
 def testMath20170810():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170810-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170810-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170810-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170810-answer.txt", 'w')
         if fSub != None:
             fSub.write('欧阳泓梓 - 20170810 - 数学题：\r\n')
             fAns.write('欧阳泓梓 - 20170810 - 数学题：\r\n')
@@ -701,8 +701,8 @@ def testMath20170810():
 
 def testMath20170822():
     try:
-        fSub = open("F:/win.oudream/data.ouhongzi/math20170822-subject.txt", 'w')
-        fAns = open("F:/win.oudream/data.ouhongzi/math20170822-answer.txt", 'w')
+        fSub = open("/fff/tmp/oukings/math20170822-subject.txt", 'w')
+        fAns = open("/fff/tmp/oukings/math20170822-answer.txt", 'w')
         if fSub != None:
             fSub.write('欧阳泓梓 - 20170822 - 数学题：\r\n')
             fAns.write('欧阳泓梓 - 20170822 - 数学题：\r\n')

@@ -1,4 +1,4 @@
-from .common import glovar
+from common import glovar
 
 
 class Show:

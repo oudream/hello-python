@@ -1,10 +1,10 @@
 class ChannelBase:
     def __init__(self, name):
         self.name = name
-        print(('ChannelBase New: ', self.name))
+        print('ChannelBase New: ', self.name)
 
     def __del__(self):
-        print(('ChannelBase Del: ', self.name))
+        print('ChannelBase Del: ', self.name)
 
 
 class ChannelManager:

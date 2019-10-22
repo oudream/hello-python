@@ -15,7 +15,7 @@ t = test.Test()
 t.testchange()
 
 print('end')
-print((test1.test11))
+print(test1.test11)
 
 exit()
 

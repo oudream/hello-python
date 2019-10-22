@@ -92,14 +92,14 @@ class WT_IPC:
     def deal_lprc_connect(self,ip,status, userdata):
         if status != self.status:
             self.status = status
-            print(('{} status changed: {}'.format(ip, status)))
+            print('{} status changed: {}'.format(ip, status))
 
     def deal_lprc_rec_data(self, data, userdata):
         content = data.contents
-        print(('识别结果：{}[{}]@{}，可信度：{}'.format(
+        print('识别结果：{}[{}]@{}，可信度：{}'.format(
             content.license.decode('gbk'),
             content.color.decode('gbk'),
-            content.ip.decode('gbk'), content.confidence)))
+            content.ip.decode('gbk'), content.confidence))
         jpeg_data = bytearray(content.full_image.length)
         for i in range(content.full_image.length):
             jpeg_data[i] = content.full_image.buff[i]
@@ -150,7 +150,7 @@ class WT_IPC_CB:
                 obj.lpr.set_callback_connect_status(self.callback_lprc_connect)
                 # obj.lpr.set_callback_jpeg_stream(self.callback_lprc_jpeg_stream)
                 self.cb_status = True
-                print(('set_callbacks',ip))
+                print('set_callbacks',ip)
 
     @CALLBACK_CONNECTION_CHANGED
     def callback_lprc_connect(self, ip, status, userdata):
@@ -159,17 +159,17 @@ class WT_IPC_CB:
         if obj:
             obj.deal_lprc_connect(ip, status, userdata)
         else:
-            print(('callback_lprc_connect obj is null',ip))
+            print('callback_lprc_connect obj is null',ip)
 
     @CALLBACK_REC_RESULT
     def callback_lprc_rec_data(self, data, userdata):
         content = data.contents
-        print(('callback_lprc_rec_data',content.ip))
+        print('callback_lprc_rec_data',content.ip)
         obj =  self.parent.get_ipc(content.ip)
         if obj:
             obj.deal_lprc_rec_data(data,userdata)
         else:
-            print(('callback_lprc_rec_data obj is null',content.ip))
+            print('callback_lprc_rec_data obj is null',content.ip)
 
 
     @CALLBACK_JPEG_STERAM
@@ -226,14 +226,14 @@ class LT_BI:
         iYc.quality = 1
         iYc.datetime = 0
 
-        print((iAttach,iAttach.sourceId))
+        print(iAttach,iAttach.sourceId)
 
-        print((len(sys.argv)))
+        print(len(sys.argv))
 
         for i in range(0, len(sys.argv)):
-            print(("pram", i, sys.argv[i]))
+            print ("pram", i, sys.argv[i])
 
-        print(("path",os.path.abspath('.')))
+        print ("path",os.path.abspath('.'))
 
         pStr  = c_char_p()
         sTemp = os.path.abspath('.')+"\\"
