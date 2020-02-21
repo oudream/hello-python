@@ -1,6 +1,6 @@
 import os
 
-import const_value
+import cpy3.const_value
 
 def testCreateFile1():
     open('test.txt', 'a').close()
