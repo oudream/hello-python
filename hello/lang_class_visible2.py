@@ -1,4 +1,4 @@
-import test_class_visible_1 as human
+import lang_class_visible_1 as human
 
 
 class Person(human.Human):

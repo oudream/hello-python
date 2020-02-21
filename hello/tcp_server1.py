@@ -1,5 +1,6 @@
 import asyncio
 
+
 class EchoServerClientProtocol(asyncio.Protocol):
     def connection_made(self, transport):
         peername = transport.get_extra_info('peername')
@@ -16,6 +17,7 @@ class EchoServerClientProtocol(asyncio.Protocol):
         print('Close the client socket')
         self.transport.close()
 
+
 loop = asyncio.get_event_loop()
 # Each client connection will create a new protocol instance
 coro = loop.create_server(EchoServerClientProtocol, '127.0.0.1', 9003)
@@ -28,7 +30,7 @@ try:
 except KeyboardInterrupt:
     pass
 
-# Close the server
-server.close()
-loop.run_until_complete(server.wait_closed())
-loop.close()
+### Close the server
+# server.close()
+# loop.run_until_complete(server.wait_closed())
+# loop.close()

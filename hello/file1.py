@@ -1,5 +1,5 @@
 import os
-from cpy.const import *
+import const_value
 
 
 def testFileWrite1():

@@ -1,6 +1,6 @@
 import os
-from cpy.const import *
 
+import const_value
 
 def testCreateFile1():
     open('test.txt', 'a').close()
@@ -170,9 +170,9 @@ def mainReplace():
     # sSrc = bytes.fromhex('efbbbf')
     # sDest = b''
     # replaceFilesBytes(r'/ddd/specialty/leetcode/algorithms/java/src/searchA2DMatrixII', r'/ddd/specialty/leetcode/algorithms/java/src-', sSrc, sDest)
-    sSrc = bytes.fromhex('0A0A')
+    sSrc = bytes.fromhex('0D0A')
     sDest = bytes.fromhex('0A')
-    replaceFilesBytes(r'/ddd/ygct/ygct_ics_cc4000/cc4k/src-/System', r'/ddd/ygct/ygct_ics_cc4000/cc4k/src-/System-', sSrc, sDest)
+    replaceFilesBytes(r'/Users/oudream/Downloads/vdi', r'/Users/oudream/Downloads/vdi-', sSrc, sDest)
 
 if __name__ == '__main__':
     mainReplace()
