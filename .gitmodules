@@ -7,3 +7,12 @@
 [submodule "lib/algorithms-python"]
 	path = lib/algorithms-python
 	url = https://github.com/TheAlgorithms/Python
+[submodule "man/python3-cookbook"]
+	path = man/python3-cookbook
+	url = https://github.com/yidao620c/python3-cookbook.git
+[submodule "referto/TheAlgorithms"]
+	path = referto/TheAlgorithms
+	url = https://github.com/TheAlgorithms/Python.git
+[submodule "referto/geek-python"]
+	path = referto/geek-python
+	url = https://github.com/geekcomputers/Python.git
