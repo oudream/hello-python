@@ -11,7 +11,7 @@ def testListLoop1():
     for i in a:
         print(i)
 
-testListLoop1()
+# testListLoop1()
 
 
 def testListLoop2():
@@ -20,7 +20,7 @@ def testListLoop2():
     for i in range(len(a)):
         print((i, a[i]))
 
-testListLoop2()
+# testListLoop2()
 
 
 def testListLoop3():
@@ -29,7 +29,7 @@ def testListLoop3():
     for i, el in enumerate(a):
         print((i, el))
 
-testListLoop3()
+# testListLoop3()
 
 
 # --- --- --- --- ---
@@ -41,7 +41,7 @@ def testList11():
     a = [None for i in range(10)]
     print(a)
 
-testList11()
+# testList11()
 
 
 def testList12():
@@ -57,4 +57,4 @@ def testList12():
     print(subs)
     print((re.sub(r'\(.*\)', '( )', 'x * y = ( 55 )')))
 
-testList12()
+# testList12()
