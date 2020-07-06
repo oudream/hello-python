@@ -1,3 +1,13 @@
+class ClassA:
+    @property
+    def show(self):
+        return 'ClassA'
+
+    def __repr__(self):
+        return '{0.show}' \
+               '{0.show}'.format(self)
+
+
 def decode1():
     str = "菜鸟教程";
     str_utf8 = str.encode("UTF-8")
@@ -37,3 +47,7 @@ def str1(ls1):
 l1 = ['a']
 str1(l1)
 print(l1)
+
+ca = ClassA()
+print(repr(ca))
+print(ca.show)

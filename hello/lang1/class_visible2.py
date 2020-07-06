@@ -43,7 +43,45 @@ def say():
     print("small say")
 
 
+class Foo(object):
+    _count = 0  # 不要直接操作这个变量，也尽量避免访问它
+
+    @property
+    def count(self):
+        return Foo._count
+
+    @count.setter
+    def count(self, num):
+        Foo._count = num
+
+
+f1 = Foo()
+f2 = Foo()
+print(f1.count, f1._count, f2.count, f2._count)
+
+f1.count = 1
+print(f1.count, f1._count, f2.count, f2._count)
+
+
 # Say()
+
+
+class Foo(object):
+    __count = 0  # 私有变量，无法在外部访问，Foo.__count会出错
+
+    @classmethod
+    def get_count(cls):
+        return cls.__count
+
+    @classmethod
+    def set_count(cls, num):
+        cls.__count = num
+
+
+f1 = Foo()
+f2 = Foo()
+Foo.set_count(1)
+print(f1.get_count(), f2.get_count())
 
 a = Cb()
 s = a.CName()

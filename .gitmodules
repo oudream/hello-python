@@ -16,3 +16,6 @@
 [submodule "referto/geek-python"]
 	path = referto/geek-python
 	url = https://github.com/geekcomputers/Python.git
+[submodule "referto/python-patterns"]
+	path = referto/python-patterns
+	url = https://github.com/faif/python-patterns.git
