@@ -27,7 +27,7 @@ def hello2():
         print(L1, end=' ')
 
 
-def hello2():
+def hello3():
     """
     可能会重复
     Returns:
@@ -38,5 +38,6 @@ def hello2():
 
 
 if __name__ == '__main__':
-    hello1()
+    # hello1()
     hello2()
+    hello3()
