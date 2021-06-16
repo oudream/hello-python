@@ -44,6 +44,7 @@ def hello4():
     print((m.string))
     print((m.group()))
 
+
 def hello5():
     import re
 
@@ -61,7 +62,20 @@ def hello5():
     for value in mm:
         print(value)
 
+
+def hello6():
+    import re
+
+    sl = ["220kV", "110kV", "35kV", "10kV"]
+    s1 = r"2号主变220kV侧中性点2029接地隔离开关O相"
+    for s in sl:
+        s1 = s1.replace(s, '')
+
+    res = r'([A-Za-z0-9]{2,})'
+    mm = re.findall(res, s1, re.I)
+    if len(mm) > 0:
+        print(mm[0])
+
+
 if __name__ == '__main__':
-    hello5()
-
-
+    hello6()
